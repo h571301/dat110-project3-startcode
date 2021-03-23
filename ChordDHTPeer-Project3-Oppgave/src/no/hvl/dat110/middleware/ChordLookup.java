@@ -5,6 +5,7 @@ package no.hvl.dat110.middleware;
 
 import java.math.BigInteger;
 import java.rmi.RemoteException;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -65,7 +66,7 @@ public class ChordLookup {
 		return (NodeInterface) node;			
 	}
 	
-	public void copyKeysFromSuccessor(NodeInterface succ) {
+	public void copyKeysFromSuccessor(NodeInterface succ) throws NoSuchAlgorithmException {
 		
 		Set<BigInteger> filekeys;
 		try {
