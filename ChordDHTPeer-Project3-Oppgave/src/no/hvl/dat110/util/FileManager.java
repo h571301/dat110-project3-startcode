@@ -52,18 +52,17 @@ public class FileManager {
 		this.chordnode = chordnode;
 	}
 	
-	public void createReplicaFiles() {
+	public void createReplicaFiles() throws RemoteException, NoSuchAlgorithmException {
 	 	
 		// implement
-		
 		// set a loop where size = numReplicas
-		
 		// replicate by adding the index to filename
-		
 		// hash the replica
-		
 		// store the hash in the replicafiles array.
-
+		for(int x=0; x<numReplicas; x++) {
+			String replica = filename+x;
+			replicafiles[x] = Hash.hashOf(replica);
+		}
 	}
 	
     /**
